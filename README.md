@@ -60,7 +60,7 @@ Documentation
             --env TESTNET=1 \
             -p 33300:33300 \
             -p 127.0.0.1:33350:33350 \
-            dualitysolutions/dynamicd
+            dualitysolutions/docker-dynamicd
 
 * Additional documentation in the [docs folder](docs).
 
