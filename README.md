@@ -36,7 +36,7 @@ Quick Start
         docker run -v dynamicd-data:/dynamic --name=dynamicd-node -d \
             -p 33300:33300 \
             -p 127.0.0.1:33350:33350 \
-            dualitysolutions/dynamicd
+            dualitysolutions/docker-dynamicd
 
 2. Verify that the container is running and dynamicd node is downloading the blockchain
 
