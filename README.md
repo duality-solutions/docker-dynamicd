@@ -24,7 +24,7 @@ Really Fast Quick Start
 
 One liner for Ubuntu 16.04 LTS machines with JSON-RPC enabled on localhost and adds upstart init script:
 
-    curl https://raw.githubusercontent.com/duality-solutions/docker-dynamicd/master/bootstrap-host.sh | sh -s trusty
+    curl https://raw.githubusercontent.com/duality-solutions/docker-dynamicd/master/bootstrap-host.sh | sh -s xenial
 
 
 Quick Start

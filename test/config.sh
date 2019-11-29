@@ -2,7 +2,7 @@
 set -e
 
 testAlias+=(
-	[dynamicd:trusty]='dynamicd'
+	[dynamicd:xenial]='dynamicd'
 )
 
 imageTests+=(
