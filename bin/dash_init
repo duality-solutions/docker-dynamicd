@@ -1,0 +1,25 @@
+#!/bin/bash
+
+set -ex
+
+# This shouldn't be in the Dockerfile or containers built from the same image
+# will have the same credentials.
+if [ ! -e "$HOME/.dynamic/dynamic.conf" ]; then
+    mkdir -p $HOME/.dynamic
+
+    echo "Creating dynamic.conf"
+
+    # Seed a random password for JSON RPC server
+    cat <<EOF > $HOME/.dynamic/dynamic.conf
+testnet=${TESTNET:-0}
+disablewallet=${DISABLEWALLET:-1}
+printtoconsole=${PRINTTOCONSOLE:-1}
+rpcuser=${RPCUSER:-dynamicrpc}
+rpcpassword=${RPCPASSWORD:-`dd if=/dev/urandom bs=33 count=1 2>/dev/null | base64`}
+EOF
+
+fi
+
+cat $HOME/.dynamic/dynamic.conf
+
+echo "Initialization completed successfully"

@@ -1,0 +1,15 @@
+# Copy to /etc/init/docker-dynamicd.conf
+description "Docker container for dynamicd p2p node"
+start on filesystem and started docker
+stop on runlevel [!2345]
+respawn
+pre-start script
+  # Clean-up if left behind
+  docker rm -f dynamicd-node || true
+  
+  # Attempt to always update and fail silently if the network isn't ready
+  docker pull dualityblockchainsolutions/dynamicd || true
+end script
+script
+  exec docker run --rm -v dynamicd-data:/dynamic --name=dynamicd-node --rm -p 9999:9999 -p 127.0.0.1:33350:33350 dualityblockchainsolutions/dynamicd
+end script

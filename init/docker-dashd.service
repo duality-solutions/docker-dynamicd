@@ -1,0 +1,31 @@
+[Unit]
+Description=dynamicd Docker Container
+Documentation=https://github.com/duality-solutions/docker-dynamicd
+After=network.target docker.socket
+Requires=docker.socket
+
+[Service]
+RestartSec=10
+Restart=always
+
+# Modify IP6_PREFIX to match network config
+Environment="NAME=dynamicd"
+Environment="DATA_VOL=dynamicd-data"
+Environment="IMG=dynamic/dynamicd:dev"
+Environment="PORT=33300:33300/tcp"
+
+# To override environment variables, use local configuration directory:
+# /etc/systemd/system/docker-dynamicd.service/local.conf
+# http://www.freedesktop.org/software/systemd/man/systemd.unit.html
+
+# Clean-up bad state if still hanging around
+ExecStartPre=-/usr/bin/docker rm -f $NAME
+
+# Attempt to pull new image for security updates
+ExecStartPre=-/usr/bin/docker pull $IMG
+
+# Main process
+ExecStart=/usr/bin/docker run --rm -v ${DATA_VOL}:/dynamic --name ${NAME} -p ${PORT} ${IMG} dynamic_oneshot $ARGS
+
+[Install]
+WantedBy=multi-user.target
