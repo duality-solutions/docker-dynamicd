@@ -42,7 +42,7 @@ Quick Start
 
         $ docker ps
         CONTAINER ID        IMAGE                         COMMAND             CREATED             STATUS              PORTS                                              NAMES
-        d0e1076b2dca        dualitysolutions/dynamicd:latest          "dynamic_oneshot"      2 seconds ago       Up 1 seconds        127.0.0.1:33350->33350/tcp, 0.0.0.0:33300->33300/tcp   dynamicd-node
+        28bde7d11775        dualitysolutions/dynamicd:latest          "dynamic_oneshot"      2 seconds ago       Up 1 seconds        127.0.0.1:33350->33350/tcp, 0.0.0.0:33300->33300/tcp   dynamicd-node
 
 3. You can then access the daemon's output thanks to the [docker logs command]( https://docs.docker.com/reference/commandline/cli/#logs)
 
