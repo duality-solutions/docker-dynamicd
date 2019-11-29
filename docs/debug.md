@@ -14,7 +14,7 @@
 
 *Note:* This container will be run in the same way as the dynamicd node, but will not connect to already running containers or processes.
 
-    docker run -v dynamicd-data:/dynamic --rm -it dualityblockchainsolutions/dynamicd bash -l
+    docker run -v dynamicd-data:/dynamic --rm -it dualitysolutions/dynamicd bash -l
 
 You can also attach bash into running container to debug running dynamicd
 

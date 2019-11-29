@@ -1,7 +1,7 @@
 dynamicd for Docker
 ================
 
-[![Docker Stats](http://dockeri.co/image/dualityblockchainsolutions/dynamicd)](https://hub.docker.com/r/dualityblockchainsolutions/dynamicd/)
+[![Docker Stats](http://dockeri.co/image/dualitysolutions/dynamicd)](https://hub.docker.com/r/dualitysolutions/dynamicd/)
 
 [![Build Status](https://travis-ci.org/duality-solutions/docker-dynamicd.svg?branch=master)](https://travis-ci.org/duality-solutions/docker-dynamicd/)
 
@@ -36,13 +36,13 @@ Quick Start
         docker run -v dynamicd-data:/dynamic --name=dynamicd-node -d \
             -p 33300:33300 \
             -p 127.0.0.1:33350:33350 \
-            dualityblockchainsolutions/dynamicd
+            dualitysolutions/dynamicd
 
 2. Verify that the container is running and dynamicd node is downloading the blockchain
 
         $ docker ps
         CONTAINER ID        IMAGE                         COMMAND             CREATED             STATUS              PORTS                                              NAMES
-        d0e1076b2dca        dualityblockchainsolutions/dynamicd:latest          "dynamic_oneshot"      2 seconds ago       Up 1 seconds        127.0.0.1:33350->33350/tcp, 0.0.0.0:33300->33300/tcp   dynamicd-node
+        d0e1076b2dca        dualitysolutions/dynamicd:latest          "dynamic_oneshot"      2 seconds ago       Up 1 seconds        127.0.0.1:33350->33350/tcp, 0.0.0.0:33300->33300/tcp   dynamicd-node
 
 3. You can then access the daemon's output thanks to the [docker logs command]( https://docs.docker.com/reference/commandline/cli/#logs)
 
@@ -60,7 +60,7 @@ Documentation
             --env TESTNET=1 \
             -p 33300:33300 \
             -p 127.0.0.1:33350:33350 \
-            dualityblockchainsolutions/dynamicd
+            dualitysolutions/dynamicd
 
 * Additional documentation in the [docs folder](docs).
 

@@ -4,7 +4,7 @@
 #
 set -ex
 
-DYNAMIC_IMAGE=${DYNAMIC_IMAGE:-dualityblockchainsolutions/dynamicd}
+DYNAMIC_IMAGE=${DYNAMIC_IMAGE:-dualitysolutions/dynamicd}
 
 distro=$1
 shift
