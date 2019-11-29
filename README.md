@@ -1,7 +1,7 @@
 dynamicd for Docker
 ================
 
-[![Docker Stats](http://dockeri.co/image/dualitysolutions/dynamicd)](https://hub.docker.com/r/dualitysolutions/dynamicd/)
+[![Docker Stats](http://dockeri.co/image/dualitysolutions/docker-dynamicd)](https://hub.docker.com/r/dualitysolutions/docker-dynamicd/)
 
 [![Build Status](https://travis-ci.com/duality-solutions/docker-dynamicd.svg?branch=master)](https://travis-ci.org/duality-solutions/docker-dynamicd/)
 
