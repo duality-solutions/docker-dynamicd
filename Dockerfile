@@ -14,8 +14,8 @@ RUN useradd -u ${USER_ID} -g dynamic -s /bin/bash -m -d /dynamic dynamic
 
 RUN chown dynamic:dynamic -R /dynamic
 
-ADD https://github.com/duality-solutions/Dynamic/releases/download/v2.4.3.0/Dynamic-2.4.3.0-Linux-x64.tar.gz /tmp/
-RUN tar -xvf /tmp/Dynamic-2.4.3.0-Linux-x64.tar.gz -C /tmp/
+ADD https://github.com/duality-solutions/Dynamic/releases/download/v2.4.4.1/Dynamic-2.4.4.1-Linux-x64.tar.gz /tmp/
+RUN tar -xvf /tmp/Dynamic-2.4.4.1-Linux-x64.tar.gz -C /tmp/
 RUN cp /tmp/dynamic*/bin/*  /usr/local/bin
 RUN rm -rf /tmp/dynamic*
 
